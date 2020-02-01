@@ -1,12 +1,24 @@
 <template>
-    <div>首页</div>
+    <div>
+        <NavBar class="homebar">
+            <div slot="center">购物街</div>
+        </NavBar>
+    </div>
 </template>
 <script>
+import NavBar from 'components/common/navbar/NavBar.vue'
 export default {
-    name:'Home'
+    name:'Home',
+    components:{
+        NavBar
+    }
     
 }
 </script>
-<style lang="stylus">
+<style>
+.homebar{
+    background:lightpink;
+    color: white;
+}
 
 </style>

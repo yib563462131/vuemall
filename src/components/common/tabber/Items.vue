@@ -32,7 +32,7 @@ export default {
 }
 </script>
 <style>
-@import url(../../assets/iconfont/iconfont.css);
+@import url(../../../assets/iconfont/iconfont.css);
 .active{
    
     color: red;

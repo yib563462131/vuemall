@@ -12,7 +12,7 @@ export default {
 }
 </script>
 <style>
-@import url(../../assets/css/base.css);
+/* @import url(../../assets/css/base.css); */
 
 
 .tab-bar{
@@ -21,7 +21,7 @@ export default {
     bottom: 0px;
     width: 100vw;
     height: 49px;
-    box-shadow: 1px 1px 2px rgba(100, 100,100, .6);
+    box-shadow: 1px 1px 2px rgba(100, 100,100, .1);
 }
 .tab-bar>div{
     flex: 1;
