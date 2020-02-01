@@ -1,5 +1,5 @@
 <template>
-<div :class="{active:aa}" @click="down()">
+<div :class="{active:isActive}" @click="down()">
     <slot name="icons"></slot>
     
     <slot name="texts"></slot>
@@ -16,6 +16,11 @@ export default {
     data(){
         return{
             aa:false
+        }
+    },
+    computed:{
+        isActive(){
+            return this.$route.path.indexOf(this.path)!=-1;
         }
     },
     methods:{

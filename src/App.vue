@@ -6,19 +6,19 @@
       <router-view/>
       <Tabber>
         <Items path="/home">
-          <i class="iconfont icon3 a" slot='icons'></i>
+          <i class="iconfont iconhome a" slot='icons'></i>
           <div slot='texts'>首页</div>
         </Items>
         <Items path="/cart">
-          <i class="icongouwuche1 iconfont a" slot='icons'></i>
+          <i class="icongouwuche iconfont a" slot='icons'></i>
           <div slot='texts'>购物车</div>
         </Items>
         <Items path="/category">
-          <i class="iconicon-test iconfont a" slot='icons'></i>
+          <i class="iconshoucang iconfont a" slot='icons'></i>
           <div slot='texts'>收藏</div>
         </Items>
         <Items path="/profile">
-          <i class="icongouwuche iconfont a" slot='icons'></i>
+          <i class="iconMy iconfont a" slot='icons'></i>
           <div slot='texts'>我的</div>
         </Items>
      
