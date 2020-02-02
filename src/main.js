@@ -26,11 +26,11 @@ new Vue({
 // }).then(res=>{
 //   console.log(res)
 // })
-request({
-  url:'/home/multidata'
-}).then(res=>{
-  console.log(res)
-}).catch(err=>{
-  console.log(err)
-})
+// request({
+//   url:'/home/multidata'
+// }).then(res=>{
+//   console.log(res)
+// }).catch(err=>{
+//   console.log(err)
+// })
 

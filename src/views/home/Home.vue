@@ -7,10 +7,23 @@
 </template>
 <script>
 import NavBar from 'components/common/navbar/NavBar.vue'
+import {getHomeMultidata} from 'network/home.js'
 export default {
     name:'Home',
+    data(){
+        return{
+            result:null
+        }
+
+    },
     components:{
         NavBar
+    },
+    created(){
+        getHomeMultidata().then(res=>{
+            this.result=res;
+
+        })
     }
     
 }
