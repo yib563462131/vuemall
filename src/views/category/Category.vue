@@ -1,5 +1,5 @@
 <template>
-    <div>收藏</div>
+    <div>分类</div>
 </template>
 <script>
 export default {
@@ -7,6 +7,6 @@ export default {
     
 }
 </script>
-<style lang="stylus">
+<style scoped>
 
 </style>

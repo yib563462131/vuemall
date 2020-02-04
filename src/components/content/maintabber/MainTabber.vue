@@ -11,7 +11,7 @@
         </Items>
         <Items path="/category">
           <i class="iconshoucang iconfont a" slot='icons'></i>
-          <div slot='texts'>收藏</div>
+          <div slot='texts'>分类</div>
         </Items>
         <Items path="/profile">
           <i class="iconMy iconfont a" slot='icons'></i>
@@ -35,6 +35,9 @@ export default {
     
 }
 </script>
-<style>
+<style scoped>
+Tabber{
+  background: #eee
+}
 
 </style>

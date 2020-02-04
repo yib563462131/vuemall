@@ -2,8 +2,8 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import axios from 'axios'
-import {request} from './network/request.js'
+// import axios from 'axios'
+// import {request} from './network/request.js'
 
 Vue.config.productionTip = false
 
