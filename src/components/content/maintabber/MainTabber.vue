@@ -1,8 +1,8 @@
 <template>
-<div>
+<div class="box">
     <Tabber>
         <Items path="/home">
-          <i class="iconfont iconhome a" slot='icons'></i>
+          <i class="iconfont iconshouye a" slot='icons'></i>
           <div slot='texts'>首页</div>
         </Items>
         <Items path="/cart">
@@ -10,11 +10,11 @@
           <div slot='texts'>购物车</div>
         </Items>
         <Items path="/category">
-          <i class="iconshoucang iconfont a" slot='icons'></i>
+          <i class="iconfenlei iconfont a" slot='icons'></i>
           <div slot='texts'>分类</div>
         </Items>
         <Items path="/profile">
-          <i class="iconMy iconfont a" slot='icons'></i>
+          <i class="iconwode iconfont a" slot='icons'></i>
           <div slot='texts'>我的</div>
         </Items>
      
@@ -36,8 +36,12 @@ export default {
 }
 </script>
 <style scoped>
-Tabber{
-  background: #eee
+
+.a{
+  font-size: 25px
 }
+/* .box{
+  background-color: black
+} */
 
 </style>

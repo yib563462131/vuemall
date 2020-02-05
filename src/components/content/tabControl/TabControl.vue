@@ -40,7 +40,8 @@ export default {
     height: 40px;
     line-height: 40px;
     font-size: 15px;
-    background-color: white;
+    background-color:white;
+    
 
 }
 .tab-control-item{

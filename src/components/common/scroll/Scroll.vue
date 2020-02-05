@@ -35,8 +35,8 @@ export default {
     mounted(){
         //创建BScroll对象
         this.scroll=new BScroll(this.$refs.wrapper,{
-            click:true,
-            probeType:this.probeType,
+            click:true,//使点击事件有效
+            probeType:this.probeType,//监听滚动类型0，1不监听，2监听拖动，3监听拖动后的滑动
             pullUpLoad:this.pullUpLoad
 
         }),
@@ -45,20 +45,26 @@ export default {
             // return console.log(position)
             this.$emit('scroll',position)
         }),
-        //监听上拉事件
+        //监听上拉加载事件
         this.scroll.on('pullingUp',()=>{
             this.$emit('pullingUp')
 
         })
+        
     },
     methods:{
-        //监听上拉事件
+        //监听点击置顶
         scrollTo(x,y,tiem=300){
-            this.scroll.scrollTo(x,y,tiem)
+             this.scroll && this.scroll.scrollTo(x,y,tiem)
 
         },
+        //多次上拉加载
         finishPullUp(){
             this.scroll.finishPullUp()
+        },
+        refresh(){
+            
+            this.scroll && this.scroll.refresh()
         }
 
     }

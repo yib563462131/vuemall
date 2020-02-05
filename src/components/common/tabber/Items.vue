@@ -1,5 +1,5 @@
 <template>
-<div :class="{active:isActive}" @click="down()">
+<div :class="{active:isActive}" @click="down()" class="box">
     <slot name="icons"></slot>
     
     <slot name="texts"></slot>
@@ -31,11 +31,15 @@ export default {
     
 }
 </script>
-<style>
+<style scoped>
 @import url(../../../assets/iconfont/iconfont.css);
+/* @import url(src\assets\iconfont\iconfont.css); */
 .active{
    
     color: red;
 }
+/* .box{
+    background-color: black;
+} */
 </style>
 
