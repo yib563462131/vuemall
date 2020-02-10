@@ -39,6 +39,7 @@ import FetureView from './childComps/FeatureView'
 
 import { getHomeMultidata ,getHomeGoods} from '../../network/home.js'
 import {debounce} from '../../common/utils.js'
+import {itemListenerMixin} from 'common/mixin.js'
 
 export default {
     name:'Home',
@@ -54,9 +55,12 @@ export default {
             currentType:'pop',
             isShowBackTop:false,
             tabOffsetTop:0,
-            isTabFixed:false
+            isTabFixed:false,
+            saveY:0,
+            itemImgListener:null
         }
     },
+    
     computed:{
         showGoods(){
             return this.goods[this.currentType].list;
@@ -79,17 +83,35 @@ export default {
         this.getHomeGoods('pop'); 
         this.getHomeGoods('new');
         this.getHomeGoods('sell')
+        
       
        
     },
+    // mixins:[itemListenerMixin],
+   
     mounted(){
          //监听item图片加载完成
         const refresh=debounce(this.$refs.scroll.refresh,10)
-        this.$bus.$on('itemImageLoad',()=>{
+        this.itemImgListener=()=>{
            refresh()
-        })
+        }
+        this.$bus.$on('itemImageLoad',this.itemImgListener)
 
 
+    },
+     destroyed(){
+        console.log('home destroyed')
+    },
+    activated(){
+        this.$refs.scroll.scrollTo(0,this.saveY,10)
+        this.$refs.scroll.refresh()
+    },
+    deactivated(){
+        //b保存Y值
+        this.saveY=this.$refs.scroll.getScrollY()
+        // console.log(this.saveY)
+        //取消全局事件监听
+        this.$bus.$off('itemImgLoad',this.itemImgListener)
     },
     methods:{ 
         /**

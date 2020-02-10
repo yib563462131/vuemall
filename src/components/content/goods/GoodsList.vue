@@ -1,6 +1,6 @@
 <template>
 <div class="goods">
-    <GoodsListItem v-for='item in goods' :goodsItem="item">
+    <GoodsListItem v-for='item in goods' :product="item">
 
     </GoodsListItem>
 

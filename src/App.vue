@@ -3,10 +3,13 @@
    
       <!-- <router-link to="/">Home</router-link>  -->
       <!-- <router-link to="/about">About</router-link> -->
-      <div class="box1"><router-view/></div>
-      <div class="box2">
-         <MainTabber/>
-      </div>
+      <keep-alive exclude="Detail">
+        <router-view/>
+      </keep-alive>
+      
+      
+      <MainTabber/>
+    
      
       
     
@@ -27,16 +30,7 @@
   color: #2c3e50;
 } */
 
-/* MainTabber{
-  position: fixed;
-  bottom: 0px;
-} */
-/* .box1{
-  z-index: -1;
-}
-.box2{
-  z-index: 2;
-} */
+
 
 
 
