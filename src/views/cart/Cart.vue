@@ -19,6 +19,7 @@ import CartBottonBar from './childComps/CartBottomBar'
 
 
 import {mapGetters} from 'vuex'
+
 export default {
     name:'Cart',
     components:{

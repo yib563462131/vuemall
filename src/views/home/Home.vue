@@ -103,6 +103,7 @@ export default {
         console.log('home destroyed')
     },
     activated(){
+        //再次活跃保持原来的位置
         this.$refs.scroll.scrollTo(0,this.saveY,10)
         this.$refs.scroll.refresh()
     },
